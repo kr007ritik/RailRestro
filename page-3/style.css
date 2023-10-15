@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {}
+
+#station {
+
+    .head_container {
+        background: url(../img/train_bg.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+
+        .back_btn {
+            margin-bottom: 10px;
+            
+            & a {
+                overflow: hidden;
+                
+                
+                & img {
+                    padding: 5px;
+                    width: 30px;
+                    background-color: #ffffffb0;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .station_train_details {
+            padding: 15px 25px;
+            border-radius: 20px;
+            background-color: #ffffffb0;
+
+            .station_details {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+
+                .station_name {
+
+                    & p {
+                        color: #000;
+                        margin: 0;
+                        font-size: 12px;
+
+                        & img {
+                            width: 12px;
+                        }
+                    }
+
+                    & h4 {
+                        margin: 0;
+                        font-size: 15px;
+                    }
+                }
+
+                .date_time {
+
+                    & p {
+                        color: #000;
+                        margin: 0;
+                        font-size: 12px;
+                        text-align: right;
+
+                        & img {
+                            width: 12px;
+                        }
+                    }
+
+                    & h4 {
+                        margin: 0;
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            .train_detail {
+                /* margin-bottom: 10px; */
+
+                & p {
+                    color: #000;
+                    margin: 0;
+                    font-size: 12px;
+
+                    & img {
+                        width: 12px;
+                    }
+                }
+
+                & h4 {
+                    margin: 0;
+                    font-size: 15px;
+                }
+            }
+        }
+
+    }
+}
+
+.change_station {
+    display: flex;
+    justify-content: end;
+    margin: 10px 20px;
+
+    .btn{
+        text-align: center;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #455f91;
+        
+        & a {
+            color: #fff;
+            font-size: 12px;
+        }
+    }
+}
+
+#restaurant_list {
+
+    .restaurant {
+        margin: 10px 20px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #f5f5f5;
+        box-shadow: 0px 0px 5px rgb(200, 200, 200);
+
+        .restaurant_details {
+            display: grid;
+            grid-template-columns: 60px 1fr 90px;
+            justify-content: space-between;
+            /* align-items: ; */
+            padding-bottom: 5px;
+            border-bottom: 2px dashed #455f91;
+
+            .restaurant_logo {
+                & img {
+                    width: 40px;
+                    margin-top: 10px;
+                }
+            }
+
+            .restaurant_name_rating {
+
+                .restaurant_name {}
+
+                .restaurant_rating {
+                    & p {
+                        display: inline-block;
+                        font-size: 12px;
+                        color: green;
+                    }
+                    .star_rating{
+                        margin-left: 5px;
+                    }
+                }
+
+                .min_order {
+                    font-size: 13px;
+                }
+            }
+
+            .restaurant_timing {
+                & p {
+                    text-align: center;
+                    font-size: 13px;
+                    font-weight: 500;
+                }
+
+                .view_btn {
+                    width: 100%;
+                    text-align: center;
+                    padding: 5px 0;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    background-color: #455f91;
+
+                    & a {
+                        color: #fff;
+                    }
+                }
+            }
+
+        }
+
+        .special_dish {
+            & p {
+                font-size: 10px;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+
+
+/* Common styles */
+
+.color_primary {
+    color: #455f91;
+}
+
+.bg_color_primary {
+    background-color: #455f91;
+}

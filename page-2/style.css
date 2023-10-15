@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+#train {
+
+    .head_container {
+        background: url(../img/train_bg.jpg) no-repeat;
+        background-size:cover;
+        background-position: center;
+        padding: 20px;
+
+        .back_btn {
+            margin-bottom: 10px;
+
+            & a {
+                overflow: hidden;
+
+                & img {
+                    padding: 5px;
+                    width: 30px;
+                    background-color: #ffffffb0;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .train_details {
+            padding: 15px 25px;
+            border-radius: 20px;
+            background-color: #ffffffb0;
+
+            .train_name {
+                z-index: 999;
+                margin-bottom: 10px;
+
+                & p {
+                    color: #000;
+                    margin: 0;
+
+                    & img {
+                        width: 12px;
+                    }
+                }
+
+                & h3 {
+                    margin: 0;
+                }
+            }
+
+            .train_date {
+
+                & p {
+                    color: #000;
+                    margin: 0;
+
+                    & img {
+                        width: 12px;
+                        margin-right: 5px;
+                    }
+                }
+
+                & h5 {
+                    margin: 0;
+                }
+            }
+
+        }
+    }
+}
+
+.message {
+    margin: 10px;
+    background-color: rgba(226, 223, 223, 0.5);
+    border-radius: 20px;
+
+
+
+
+    & p {
+        font-size: 10px;
+        margin: 10px;
+        padding: 5px 0;
+        display: flex;
+        align-items: center;
+
+        & img {
+            width: 15px;
+            margin-right: 5px;
+        }
+    }
+}
+
+.select_station_header {
+    margin: 10px;
+
+    h3 {
+        margin: 10px;
+    }
+}
+
+#station_list {
+
+    .station {
+        margin: 10px;
+        padding: 0px 15px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 0px 5px rgb(200, 200, 200);;
+
+
+        .station_details {
+
+            .station_name {
+
+                & h3 {
+                    margin: 10px 0 20px;
+                }
+            }
+
+            .halt_restaurant {
+                & p {
+                    margin-bottom: 5px;
+
+                    & img {
+                        width: 15px;
+                    }
+                }
+            }
+
+        }
+
+        .station_time {
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+
+            .date_time {
+                background: linear-gradient(180deg, rgba(159, 244, 188, 1) 0%, rgba(219, 219, 219, 1) 90%);
+                color: #000;
+                padding: 5px 10px;
+            }
+
+            .view_btn {
+                background-color: #445E90;
+                padding: 5px;
+                cursor: pointer;
+
+                & a {
+                    color: #fff;
+                }
+            }
+
+        }
+    }
+}
+
+
+
+
+/* Common styles */
+
+.color_primary {
+    color: #455f91;
+}
