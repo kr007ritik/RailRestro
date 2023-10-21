@@ -10,7 +10,7 @@
 #train {
 
     .head_container {
-        background: url(img/train_bg.jpg) no-repeat;
+        background: url(../img/train_bg.jpg) no-repeat;
         background-size:cover;
         background-position: center;
         padding: 20px;
