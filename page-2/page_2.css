@@ -7,6 +7,11 @@
     list-style-type: none;
 }
 
+body{
+    max-width: 850px;
+    margin: auto;
+}
+
 #train {
 
     .head_container {

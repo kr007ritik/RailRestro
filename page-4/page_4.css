@@ -7,6 +7,11 @@
     list-style-type: none;
 }
 
+body {
+    max-width: 850px;
+    margin: auto;
+}
+
 #restaurant {
 
     .head_container {
@@ -33,7 +38,6 @@
             padding: 0px 5px;
 
             .restaurant_name {
-                z-index: 999;
                 padding-bottom: 5px;
                 margin-bottom: 10px;
                 border-bottom: 1px dashed #fff;
@@ -46,11 +50,12 @@
 
             .restaurant_info {
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-around;
 
                 & h6 {
                     color: #fff;
                     text-align: center;
+                    font-weight: 400;
 
                     & img {
                         width: 11px;
@@ -64,6 +69,7 @@
                 & p {
                     color: orange;
                     font-size: 10px;
+                    font-weight: 400;
                 }
 
                 & hr {
@@ -77,13 +83,13 @@
     }
 }
 
-#search_section{
+#search_section {
     margin: 5px 20px;
     border-radius: 5px;
     background-color: rgb(239, 238, 238);
     padding: 10px 15px;
 
-    .veg_nonveg_btn{
+    .veg_nonveg_btn {
         display: flex;
         gap: 10px;
         margin-bottom: 5px;
@@ -91,23 +97,248 @@
         /* & input[type=checkbox]:checked{
             background-color: greenyellow;
         } */
+
     }
 
-    .search-box{
+    .search-box {
+        display: flex;
+        gap: 5px;
         background-color: #fff;
         border: 1px solid grey;
         border-radius: 5px;
         padding: 2px 5px;
 
-        & input{
+        & input[type=search] {
             border: none;
-            /* width:; */
+            width: 100%;
+        }
+
+        & input[type=search]:active {
+            border: none;
         }
     }
 }
+
+#meals {
+    margin-bottom: 120px;
+
+    .meal-type {
+        margin: 10px 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .meal {
+        margin: 10px 20px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        background-color: #f5f5f5;
+        box-shadow: 0px 0px 5px rgb(200, 200, 200);
+        display: grid;
+        grid-template-columns: 1fr 100px;
+        gap: 10px;
+
+        .meal_details {
+            margin: auto 20px;
+            
+            .meal_name {
+                border-bottom: 2px dashed #455f91;
+
+                .font-red {
+                    color: #d03a3a;
+                }
+
+                .font-green {
+                    color: green;
+                }
+            }
+
+            .special_dish {
+                & p {
+                    font-size: 10px;
+                    margin-top: 5px;
+                }
+            }
+            
+        }
+
+        .add-meal {
+            display: grid;
+            border-radius: 5px;
+            overflow: hidden;
+            /* height: 60px; */
+
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+
+            & button {
+                width: 100%;
+                padding: 5px;
+                text-align: center;
+                cursor: pointer;
+                background-color: #455f91;
+                color: #fff;
+                border: none;
+            }
+        }
+    }
+}
+
+#menuBtn {
+    position: fixed;
+    bottom: 80px;
+    left: calc(50% - 58px);
+
+    & button {
+        border: none;
+        color: #fff;
+        background-color: #455f91;
+        border-radius: 5px;
+        padding: 6px 5px 3px 5px;
+        cursor: pointer;
+
+        & img {
+            width: 10px;
+            height: 15px;
+        }
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+        transition: .1;
+
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            max-width:800px;
+            height: 100vh;
+            
+            .menuHead{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .close {
+                    color: #aaaaaa;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+                
+                .close:hover,
+                .close:focus {
+                    color: #000;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+                
+            .menuContent{
+                border: 1px solid;
+                padding: 20px;
+                border-radius: 10px;
+                height: 75vh;
+                overflow: scroll;
+
+                .item{
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom:2px solid;
+
+
+                    & p{
+                        font-weight: 600;
+                        margin-top: 10px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#cart {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: green;
+    color: #fff;
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    z-index: 888;
+
+    .items {
+
+        .items_tprice {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        & hr {
+            color: #fff;
+        }
+
+        & p {
+            font-size: 12px;
+            font-weight: 200;
+        }
+    }
+
+    .view_cart {
+        margin: 10px 0;
+
+        & a {
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #fff;
+            color: green;
+            font-weight: 400;
+        }
+    }
+}
+
 
 /* Common styles */
 
 .color_primary {
     color: #455f91;
+}
+
+/* Keyframe */
+
+@keyframes menuOpen {
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: 100%;
+    }
+}
+@keyframes menuClose {
+    0%{
+        height: 100%;
+    }
+    100%{
+        height: 0;
+    }
 }
