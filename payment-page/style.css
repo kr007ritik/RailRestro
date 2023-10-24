@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    max-width: 850px;
+    margin: auto;
+}
+
+.cancelletion_policy{
+    margin: 10px;
+
+    & h4{
+        text-align: center;
+        font-weight: 500;
+    }
+
+    & p{
+        padding: 10px;
+        margin: 15px 0;
+        border-radius: 10px;
+        color: grey;
+        background-color: aliceblue;
+    }
+}
+
+#place_order{
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 10px grey;
+    border-radius: 10px 10px;
+
+    .main_container{
+
+        .address{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+
+            .deliveryAt{
+                display: flex;
+                justify-content: space-between;
+                gap: 5px;
+
+                .icon{
+                    & img{
+                        width: 20px;
+                    }
+                }
+
+                & h4{
+                    font-weight: 500;
+
+                    & span{
+                        font-weight: 600;
+                    }
+                }
+
+                & p{
+                    font-size: 14px;
+                    opacity: .6;
+                }
+            }
+            .change{
+                & a{
+                    color: orangered;
+                }
+            }
+        }
+        .order{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            color: #fff;
+
+            .pay_using{
+                
+                & select{
+                    border: none;
+                    background-color: #fff;
+                }
+
+                & p{
+                    color: #000;
+                }
+            }
+            .place_order_btn{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+                background-color: orangered;
+                padding: 5px;
+                border-radius: 5px;
+
+                .tAmount{
+
+                    & p{
+                        font-size: 13px;
+                    }
+                }
+
+                .place_order{
+                    & a{
+                        color: #fff;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
